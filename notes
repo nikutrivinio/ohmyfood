@@ -1,0 +1,45 @@
+   <div class="links">
+            <div>
+                <ul>
+                    <li> <i class="fas fa-utensils li-icons"></i></i>Suggest a restaurant</li>
+                    <li> <i class="fas fa-hands-helping li-icons"></i>Become a partner</li>
+                    <li> Legal</li>
+                    <li> Contact</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        
+footer {
+    
+    background-color: #353535;
+    color: white;
+    width: 100%;
+    padding: 20px 10%;
+
+    .footer-logo {
+        font-family: "Shrikhand",cursive;
+        font-size: 120%;
+        color: #f4f4f4;
+        margin-left: 2.5rem;
+        padding:0;
+    }
+
+    .links {
+        padding-top: 0;
+        font-weight: 700;
+
+             li {
+                list-style: none;
+                padding: 5px;
+                
+
+                .li-icons {
+                    padding-right: 1rem;
+                }   
+            }    
+    }
+
+}
