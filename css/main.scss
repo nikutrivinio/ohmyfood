@@ -153,9 +153,8 @@ h1 {
     max-height: max-content;
     padding-bottom: 20px;
     background-color:#f6f6f6;
+    
 
-    
-    
   .card-restaurants {
     width: 90%;
     height: 30vh;
@@ -165,9 +164,6 @@ h1 {
     justify-content: flex-start;
     margin: 20px 20px 20px 20px;
     border-radius: 15px;
-    
-
-
 
     img {
         width: 100%;
@@ -176,7 +172,6 @@ h1 {
         padding: 0;
         border-radius: 20px 20px 0 0;
     }
-
     .restaurant-name {
         display: flex;
         justify-content: space-between;
@@ -194,14 +189,6 @@ h1 {
         
     }
 
-    .resto-heart-icon {
-        margin: 20px;
-        font-size: 20px;
-        
-    }
-
-    
-  }
 }
 
 .footer-container {
@@ -294,6 +281,7 @@ h1 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    
     }
     &__text>h4:first-child {
         margin-bottom: 3px;
