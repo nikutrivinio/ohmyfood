@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto:wght@100&family=Shrikhand&display=swap');
+
 $background-color: rgb(226, 227, 228);
 
 $colors: (
@@ -149,11 +150,9 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 30px;
+    margin: 20px 20px 20px 20px;
     border-radius: 15px;
-    margin-bottom: 40px;
+    
 
 
 
@@ -238,43 +237,6 @@ h1 {
     position: relative;
     padding: 30px 5%;
     max-width: 1300px;
-}
-
-.header-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    &__title {
-        font-family: "Shrikhand",cursive;
-        font-size: 150%;
-        font-weight: bold;
-        margin-bottom: 0;
-        padding-left: 5%;
-    }
-}
-
-.heart-container {
-    width: 10%;
-    display: flex;
-    justify-content: flex-end;
-
-    &__icon {
-    font-size: 150%;
-    cursor: pointer;
-    position: absolute;
-    margin: 5px;
-    }
-
-    &__icon--full {
-        font-size: 150%;
-        cursor: pointer;
-        position: absolute;
-        margin: 5px;
-        color: transparent;
-        transform: scale(0.3);
-        transition: transform 300ms;
-    }
 }
 
 .submenu {
@@ -380,14 +342,23 @@ h1 {
         }
     }
 }
-.submenu.delay-1 .menu-item:nth-child(2) {
-    animation-delay: .2s;
-}
 
 .submenu.delay-1 .menu-item, .submenu.delay-2 .menu-item, .submenu.delay-3 .menu-item {
     animation: FadeIn 600ms linear;
     animation-fill-mode: backwards;
 }
+
+.submenu.delay-1 .menu-item:nth-child(2) { animation-delay: .2s;}
+.submenu.delay-1 .menu-item:nth-child(3) { animation-delay: .4s;}
+.submenu.delay-1 .menu-item:nth-child(4) { animation-delay: .6s;}
+.submenu.delay-1 .menu-item:nth-child(5) { animation-delay: .8s;}
+.submenu.delay-2 .menu-item:nth-child(2) { animation-delay: 1.2s;}
+.submenu.delay-2 .menu-item:nth-child(3) { animation-delay: 1.4s;}
+.submenu.delay-2 .menu-item:nth-child(4) { animation-delay: 1.6s;}
+.submenu.delay-3 .menu-item:nth-child(2) { animation-delay: 2.2s;}
+.submenu.delay-3 .menu-item:nth-child(3) { animation-delay: 2.4s;}
+.submenu.delay-3 .menu-item:nth-child(4) { animation-delay: 2.6s}
+
 
 
 @keyframes FadeIn{
@@ -423,18 +394,178 @@ h1 {
         width: 60%;
         margin: auto;
     }
-
-    .restaurants {
-        width: 85%;
-        margin: auto;
-    }  
-
     .restaurant-container {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .card-restaurants {
+        
+        background: green;
+        max-width: 35%;
+    }
+}
+
+.order-btn {
+        border-radius: 30px;
+        color: #fff;
+        background: #ff79da;
+        background: linear-gradient(175deg, #FF79DA 0%, #9356DC 98%);
+        padding: 10px;
+        cursor: pointer;
+        user-select: none;
+        width: 30%;
+        margin: 0 auto;
+        box-shadow: 3px 3px 14px 0px #a7a7a7;
+        transform: scale(1);
+        transition: transform 400ms;
+        max-width: 120px;
+        text-align: center;
+        margin-top: 30px;
     }
 
-    .card-restaurants {
-        max-width: 50%;
+    
+@keyframes pulse {
+    from {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    to {
+      opacity: .4;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes loader {
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.90);
+    animation: loader 2s;
+    animation-delay: 1.25s;
+    animation-fill-mode: both;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+      }
+  }
+
+.dots {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    &--primary {
+      background-color: #9356DC;
+      animation: pulse .4s ease 0s infinite alternate;
+    }
+    &--secondary {
+      background-color: #ff79da;
+      animation: pulse .4s ease .2s infinite alternate;
+    }
+    &--tertiary {
+      background-color: #99e2d0;
+      animation: pulse .4s ease .4s infinite alternate;
+
+    }
+  }
+
+  @mixin header ($size: 20px) {
+    font-size:150%;
+    font-weight:bold;
+    margin-bottom: $size;
+}
+
+@mixin heart-icon($size: 25px 25px 0 0) {
+    font-size: 150%;
+    cursor: pointer;
+    position: absolute;
+    margin: $size;
+
+}
+
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__title {
+        font-family: 'Shrikhand', cursive;
+        @include header ($size: 0);
+        padding-left: 5%;
+    }
+
+    &__icon {
+        @include heart-icon(5px);
+
+        &--full {
+            @include heart-icon(5px);
+            @include heart-hover;
+        }
+    }
+}
+
+.heart-container {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 992px){
+
+    .menus{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .descriptions {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        justify-content: space-evenly;
+        
+    }
+
+    .howto {
+        
+        max-width: 25%;
+    }
+
+    .landing-title .btn {
+        width: 20%;
+        font-size: large;
+    }
+
+    .submenu {
+        flex-direction: row;
+        flex-wrap: wrap;     
+    }
+    
+    .submenu__title {
+        flex-basis: 100%;
+    }
+    
+    .menu-item {
+        width: 30%;
+        margin: 10px;
     }
 }
