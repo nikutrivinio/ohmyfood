@@ -178,6 +178,7 @@ h1 {
 }
 
 .restaurants .card-restaurants {
+  position: relative;
   width: 90%;
   height: 30vh;
   background-color: white;
@@ -193,6 +194,16 @@ h1 {
           justify-content: flex-start;
   margin: 20px 20px 20px 20px;
   border-radius: 15px;
+}
+
+.restaurants .card-restaurants .new {
+  position: absolute;
+  background-color: #99E2D0;
+  color: #278870;
+  padding: 5px 20px;
+  border-radius: 3px;
+  top: 12px;
+  right: 12px;
 }
 
 .restaurants .card-restaurants img {
@@ -227,6 +238,8 @@ h1 {
 
 .restaurants .card-restaurants .restaurant-title a {
   text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 .footer-container {
