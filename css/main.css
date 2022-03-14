@@ -383,8 +383,8 @@ h1 {
 .menu-item__price {
   font-weight: bold;
   padding: 34px 10px 0 0;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   -webkit-transform: translateX(65px);
           transform: translateX(65px);
   position: absolute;
@@ -505,9 +505,6 @@ h1 {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  100% {
-    bottom: 0px;
-  }
 }
 
 @keyframes FadeIn {
@@ -524,9 +521,6 @@ h1 {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
-  }
-  100% {
-    bottom: 0px;
   }
 }
 
@@ -599,46 +593,6 @@ h1 {
           transform: scale(1.2) perspective(1px);
 }
 
-@-webkit-keyframes pulse {
-  from {
-    opacity: 1;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  to {
-    opacity: .4;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes pulse {
-  from {
-    opacity: 1;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  to {
-    opacity: .4;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@-webkit-keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
 .loader {
   position: fixed;
   width: 100%;
@@ -699,6 +653,46 @@ h1 {
   background-color: #99e2d0;
   -webkit-animation: pulse .4s ease .4s infinite alternate;
           animation: pulse .4s ease .4s infinite alternate;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    opacity: .4;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    opacity: .4;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
 }
 
 .heart-menu {

@@ -324,7 +324,7 @@ h1 {
     &__price {
     font-weight: bold;
     padding: 34px 10px 0 0;
-    transition: 1s;
+    transition: 0.5s;
     transform: translateX(65px);
     position: absolute;
     right: 80px;
@@ -368,6 +368,7 @@ h1 {
 .submenu.delay-1 .menu-item, .submenu.delay-2 .menu-item, .submenu.delay-3 .menu-item {
     animation: FadeIn 600ms linear;
     animation-fill-mode: backwards;
+
 }
 
 .submenu.delay-1 .menu-item:nth-child(2) { animation-delay: .2s;}
@@ -396,9 +397,7 @@ h1 {
         opacity: 1;
         transform: scale(1);
     }
-    100% {
-        bottom: 0px;
-    }
+
 }
 
 @media screen and (min-width: 600px){
@@ -451,25 +450,6 @@ h1 {
         }
     }
 
-    
-@keyframes pulse {
-    from {
-      opacity: 1;
-      transform: scale(1.2);
-    }
-    to {
-      opacity: .4;
-      transform: scale(1);
-    }
-  }
-
-  @keyframes loader {
-    100% {
-      opacity: 0;
-      z-index: -1;
-    }
-  }
-
 .loader {
     position: fixed;
     width: 100%;
@@ -513,6 +493,25 @@ h1 {
 
     }
   }
+  
+@keyframes pulse {
+    from {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    to {
+      opacity: .4;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes loader {
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
 
   @mixin header ($size: 20px) {
     font-size:150%;
