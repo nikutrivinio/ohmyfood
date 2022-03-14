@@ -236,7 +236,7 @@ h1 {
           flex-direction: column;
 }
 
-.restaurants .card-restaurants .restaurant-title a {
+.restaurants .card-restaurants a {
   text-decoration: none;
   color: black;
   cursor: pointer;
